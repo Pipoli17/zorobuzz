@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: 'Courier New', Courier, monospace;
+
+    --color-main-green: #678417;
+    --color-main-pink: #E297E2;
+    --color-main-orange: #FDAD00;
+
+    --color-text: white; /* skal ændres til hvid*/
+}
+
+body { 
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    color: var(--color-text);
+}
+
+main {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hænder{
+    width: calc(100% - 40px);
+
+
+}
+
+.indhold{
+    width: 50%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:20px; 
+    align-items: center;
+    margin: 20px;
+}
+
+.indhold p {
+    margin: 0 20px;
+    text-align: justify;
+    text-transform: none /*til at lave om i textsskrift*/
+    col
+}
+
+.bg2 {
+    background-image: url("../img/bg2.png");
+    background-size: cover;
+    background-position: center center;
+}
+@media screen and (max-width: 768px) {
+    .indhold{
+        width: 100%;
+        max-width: initial;
+    }
+}

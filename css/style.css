@@ -26,8 +26,7 @@ nav {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 50px;
-    background-color: #E297E2;
+    height: 2%;
 }
 
 nav ul {
@@ -35,7 +34,7 @@ nav ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 68%;
     list-style: none;
 }
 
@@ -49,6 +48,8 @@ nav div {
 
 nav div img {
     width: 100%;
+    margin-top: 65%;
+    
 }
 
 nav li {
@@ -62,15 +63,40 @@ nav a {
 main {
     width: 100%;
     height: 100%;
-    background-color: #97d5e2;
+    /*background-color: #97d5e2;*/
+    
 }
 
 footer {
     width: 100%;
     height: 50vh;
     background-color: #e297a5;
+    
+}
+
+.tilmeld {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.medie {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    list-style: none;
+}
+
+.kontakt {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    list-style: none;
 }
 
 .bg1 {
-    background-color: var(--color-main-green);
+    background-image: url("../img/forside.jpg");
+    background-size: cover;
+    background-position: center center;
 }
