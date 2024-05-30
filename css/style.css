@@ -6,7 +6,8 @@
 }
 
 :root {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
 
     --color-main-green: #678417;
     --color-main-pink: #E297E2;
@@ -22,42 +23,88 @@ body {
     color: var(--color-text);
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 2%;
+h1,h2,h3,h4,h5,h6 {
+    font-family: url("../fonts/made_carving/MADECARVINGOutlinePersonalUse-Bold.otf");
 }
 
-nav ul {
+.menu {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: calc(100% - 60px); /* Hvis margin ikke virker kan man bruge dette */
+    margin: 0 30px;
+}
+
+.menu .menupunkter {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 68%;
+    width: 100%;
+    max-width: 60%;
     list-style: none;
 }
 
-nav div {
+.menu div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
     width: 30%;
 }
-
-nav div img {
-    width: 100%;
-    margin-top: 65%;
-    
+.menu div img {
+    width: 80%;
 }
 
-nav li {
+.menu li {
     padding: 5px;
 }
 
-nav a {
+.menu a {
+    color: #fff;
     text-decoration: none;
+}
+
+.hovedmenu{
+    position: relative;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    width: 150px;
+    list-style: none;
+    background-color: #E297E2;
+}
+
+.submenu:hover {
+    display: flex;
+}
+
+.hovedmenu:hover .submenu{
+    display: flex;
+}
+
+.burger {
+    display: none;
+    justify-content: center;
+    position: relative;
+}
+
+.burgericon{
+    position: absolute;
+    right: 0;
+    padding: 15px;
+}
+
+.burgericon img{
+    width: 10vw;
+}
+
+.burgerlogo{
+    width: 30vw;
+    padding: 15px;
 }
 
 main {
@@ -70,7 +117,7 @@ main {
 footer {
     width: 100%;
     height: 50vh;
-    background-color: #e297a5;
+    background-color: var(--color-main-green);
     
 }
 
@@ -78,21 +125,66 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+    margin: 10% auto;
 }
 
+.input-container {
+    display: flex;
+    align-items: center;
+}
+.tilmeld input[type="text"] {
+    padding: 5px; /* Indvendig padding for tekst input */
+    margin-right: 10px; /* Margin mellem input felterne */
+    width: 200px; /* Bredde på tekst input */
+    background-color: #f0f0f0; /* Standard baggrundsfarve */
+    border: 1px solid #ccc; /* Kantfarve */
+    color: #ccc;
+}
+
+.tilmeld input[type="submit"] {
+    padding: 10px 20px; /* Indvendig padding for knappen */
+    background-color: var(--color-main-pink); /* Standard baggrundsfarve */
+    color: white; /* Tekstfarve */
+    border: none; /* Ingen kant */
+    cursor: pointer; /* Markøren ændres til en peger */
+    transition: background-color 0.3s; /* Blød overgang for baggrundsfarven */
+}
+
+/* Baggrundsfarve ved hover */
+.tilmeld input[type="submit"]:hover {
+    background-color: var(--color-main-orange); 
+}
+/*iconer til at stå i colum*/
 .medie {
     display: flex;
     flex-direction: column;
     align-items: left;
     list-style: none;
+    margin: 100% 100%;
 }
 
 .kontakt {
     display: flex;
     flex-direction: column;
-    float: right;
+    align-items: left;
     list-style: none;
+    margin: 100% -100%
+}
+/*størlse på icon billiderne*/
+.medie img, .kontakt img {
+    width: auto;
+    height: 60px;
+}
+
+/*mellemrum mellem iconerne*/
+.medie li,.kontakt li {
+    margin-bottom: 20px;
+}
+
+/*inhold i foter til at stå i en row*/
+.fod {
+    display: flex;
+    flex-direction: row;
 }
 
 .bg1 {
@@ -100,3 +192,12 @@ footer {
     background-size: cover;
     background-position: center center;
 }
+
+@media only screen and (max-width: 1000px) {
+    .burger {
+      display: flex;
+    }
+    .menu {
+      display:none;
+    }
+  }

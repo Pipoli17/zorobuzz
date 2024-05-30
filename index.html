@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Inter:wght@100..900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <title>Hjem</title>
+
 </head>
 
 <body>
@@ -14,13 +21,44 @@
     <main class="bg1">
 
         <!-- Navbar -->
-        <nav>
-            <ul>
-                <li><a href="#">Hvem er vi</a></li>
-                <li><a href="#">Produkter</a></li>
-                <li><a href="#">Alkoholfri</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Forum</a></li>
+        <nav class="menu">
+            <ul class="menupunkter">
+                <li class="hovedmenu">
+                    <a href="#">Hvem er vi</a>
+                    <ul class="submenu">
+                        <li><a href="sammenhold.html">Sammenhold er vigtiger end alkohold</a></li>
+                        <li>Vores bryggeri</li>
+                    </ul>
+                </li>
+                <li class="hovedmenu">
+                    <a href="#">Produkter</a>
+                    <ul class="submenu">
+                        <li><a href="produkter.html">ZeroBuzz Brew øl</a></li>
+                        <li>Merchandise</li>
+                    </ul>
+                </li>
+                <li class="hovedmenu">
+                    <a href="#">Alkoholfri</a>
+                    <ul class="submenu">
+                        <li>Fakta om alkoholfri øl</li>
+                        <li><a href="det-sunde-valg.html">Det sunder valg</a></li>
+                    </ul>
+                </li>
+                <li class="hovedmenu">
+                    <a href="#">Events</a>
+                    <ul class="submenu">
+                        <li><a href="events.html">øl-smagning</a></li>
+                        <li>Hvor kan du købe vores øl</li>
+                        <li>Besøg vores bryggeri</li>
+                    </ul>
+                </li>
+                <li class="hovedmenu">
+                    <a href="#">Forum</a>
+                    <ul class="submenu">
+                        <li>Dansk alkohol kultur</li>
+                        <li>Skriv sammen</li>
+                    </ul>
+                </li>
             </ul>
 
             <div>
@@ -28,33 +66,41 @@
             </div>
 
         </nav>
-        Main
-        <section></section>
+
+        <!-- Navbar mobile -->
+        <nav class="burger">
+            <a class="burgericon" href="burger.html"><img src="img/burgergrøn.png" alt="burger"></a>
+            <img class="burgerlogo" src="img/logo.png" alt="logo">
+        </nav>
+
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="fod">
+
 
         <ul>
             <div class="medie">
-                <li><a href="#"><img src="img/facebook.png" alt="">facebook</a></li>
-                <li><a href="#"><img src="img/instagram.png" alt="">instagram</a></li>
-                <li><a href="#"><img src="img/tiktokpng.png" alt="">tiktok</a></li>
+                <li><a href="#"><img src="img/facebook.png" alt="facebook"></a></li>
+                <li><a href="#"><img src="img/instagram.png" alt="instagram"></a></li>
+                <li><a href="#"><img src="img/tiktokpng.png" alt="tiktok"></a></li>
             </div>
         </ul>
 
+
+
         <section class="tilmeld">
             <h4>Tilmeld dig vores nyhedsbrev</h3>
-                <label for="lname">Email:</label><br>
-                <input type="text" id="email" name="email" value="...">
-                <input type="submit" value="Submit">
+                <br>
+                <input type="text" id="email" name="email" value="Email..">
+                <input type="submit" value="Tilmeld">
         </section>
 
         <ul>
             <aside class="kontakt">
-                <li><a href="#"><img src="img/telefon.png" alt="">telefon</a></li>
-                <li><a href="#"><img src="img/mail.png" alt="">email</a></li>
-                <li><a href="#"><img src="img/chat.png" alt="">chat</a></li>
+                <li><a href="#"><img src="img/telefon.png" alt="telefon"></a></li>
+                <li><a href="#"><img src="img/mail.png" alt="mail"></a></li>
+                <li><a href="#"><img src="img/chat.png" alt="chat"></a></li>
             </aside>
         </ul>
 
