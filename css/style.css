@@ -16,6 +16,7 @@
     --color-text: white;
 }
 
+/*størelse på boby*/
 body {
     width: 100%;
     height: 100vh;
@@ -23,15 +24,18 @@ body {
     color: var(--color-text);
 }
 
+/*font til h*/
 h1,h2,h3,h4,h5,h6 {
     font-family: url("../fonts/made_carving/MADECARVINGOutlinePersonalUse-Bold.otf");
 }
 
+/*Hvodemenu man ser på laptop*/
 .menu {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    width: calc(100% - 60px); /* Hvis margin ikke virker kan man bruge dette */
+    width: calc(100% - 60px);
+    /* Hvis margin ikke virker kan man bruge dette */
     margin: 0 30px;
 }
 
@@ -52,6 +56,8 @@ h1,h2,h3,h4,h5,h6 {
     align-items: center;
     width: 30%;
 }
+
+/*Logo på laptop*/
 .menu div img {
     width: 80%;
 }
@@ -65,11 +71,26 @@ h1,h2,h3,h4,h5,h6 {
     text-decoration: none;
 }
 
-.hovedmenu{
+/*Gør sådan submenuer dukker frem når man hover hen over*/
+.hovedmenu {
     position: relative;
 }
 
-.submenu{
+.hovedmenu a {
+    color: #678417;
+    font-weight: 1000;
+}
+
+.submenu a {
+    color: #678417;
+}
+
+.submenu li {
+    color: #678417;
+    font-weight: 1000;
+}
+
+.submenu {
     display: none;
     position: absolute;
     flex-direction: column;
@@ -82,77 +103,92 @@ h1,h2,h3,h4,h5,h6 {
     display: flex;
 }
 
-.hovedmenu:hover .submenu{
+.hovedmenu:hover .submenu {
     display: flex;
 }
 
+
+/*Insteling for burger*/
 .burger {
     display: none;
     justify-content: center;
     position: relative;
 }
 
-.burgericon{
+.burgericon {
     position: absolute;
     right: 0;
     padding: 15px;
 }
 
-.burgericon img{
-    width: 10vw;
+.burgericon img {
+    width: 6vw;
 }
 
-.burgerlogo{
-    width: 30vw;
+.burgerlogo {
+    width: 35vw;
     padding: 15px;
 }
 
 main {
     width: 100%;
     height: 100%;
-    /*background-color: #97d5e2;*/
-    
 }
 
 footer {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 50vh;
     background-color: var(--color-main-green);
-    
 }
 
 .tilmeld {
     display: flex;
+    width: 75%;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 10% auto;
+}
+
+.insæt {
+    display: flex; 
+    flex-direction: row;
 }
 
 .input-container {
     display: flex;
     align-items: center;
 }
+
 .tilmeld input[type="text"] {
-    padding: 5px; /* Indvendig padding for tekst input */
-    margin-right: 10px; /* Margin mellem input felterne */
-    width: 200px; /* Bredde på tekst input */
-    background-color: #f0f0f0; /* Standard baggrundsfarve */
-    border: 1px solid #ccc; /* Kantfarve */
+    padding: 5px;
+    width: 200px;
+ 
+    background-color: #f0f0f0;
+  
+    border: 1px solid #ccc;
+ 
     color: #ccc;
 }
 
 .tilmeld input[type="submit"] {
-    padding: 10px 20px; /* Indvendig padding for knappen */
-    background-color: var(--color-main-pink); /* Standard baggrundsfarve */
-    color: white; /* Tekstfarve */
-    border: none; /* Ingen kant */
-    cursor: pointer; /* Markøren ændres til en peger */
-    transition: background-color 0.3s; /* Blød overgang for baggrundsfarven */
+    padding: 6px 20px;
+    background-color: var(--color-main-pink);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 /* Baggrundsfarve ved hover */
 .tilmeld input[type="submit"]:hover {
-    background-color: var(--color-main-orange); 
+    background-color: var(--color-main-orange);
+}
+/* for insæt og tilmeld til at stå op af*/
+input{
+    padding: -6%;
 }
 /*iconer til at stå i colum*/
 .medie {
@@ -170,14 +206,17 @@ footer {
     list-style: none;
     margin: 100% -100%
 }
+
 /*størlse på icon billiderne*/
-.medie img, .kontakt img {
+.medie img,
+.kontakt img {
     width: auto;
     height: 60px;
 }
 
 /*mellemrum mellem iconerne*/
-.medie li,.kontakt li {
+.medie li,
+.kontakt li {
     margin-bottom: 20px;
 }
 
@@ -187,6 +226,7 @@ footer {
     flex-direction: row;
 }
 
+/* Baggrundsbillide og størelse*/
 .bg1 {
     background-image: url("../img/forside.jpg");
     background-size: cover;
@@ -195,9 +235,34 @@ footer {
 
 @media only screen and (max-width: 1000px) {
     .burger {
-      display: flex;
+        display: flex;
     }
+
     .menu {
-      display:none;
+        display: none;
     }
-  }
+}
+/*til footer*/
+@media only screen and (max-width: 570px) {
+
+    .tilmeld {
+        width: 40%;
+    }
+    
+    .insæt {
+        width: 100%;
+    }
+
+    .tilmeld input[type="text"] {
+        width: 70%;
+    }
+    
+    .tilmeld input[type="submit"] {
+        padding: 6px 5px;
+    }
+    
+    input{
+        margin: -6%;
+        padding: -6%;
+    }
+}

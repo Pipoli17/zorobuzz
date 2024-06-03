@@ -40,6 +40,20 @@ h1 {
 h2{
     margin: 5%;
 }
+.burger {
+    justify-content:center;
+}
+
+.burgericon {
+    position: absolute;
+    right: 0;
+    padding: 15px;
+}
+
+.burgericon img {
+    width: 6vw;
+}
+
 
 /* Indholdet på siden jusetringer*/
 main {
@@ -106,6 +120,94 @@ main p {
     line-height: 2;
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50vh;
+    background-color: var(--color-main-orange);
+}
+
+.tilmeld {
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+
+.insæt {
+    display: flex; 
+    flex-direction: row;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.tilmeld input[type="text"] {
+    padding: 5px;
+    width: 200px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #ccc;
+}
+
+.tilmeld input[type="submit"] {
+    padding: 6px 20px;
+    background-color: var(--color-main-pink);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Baggrundsfarve ved hover */
+.tilmeld input[type="submit"]:hover {
+    background-color: var(--color-main-green);
+}
+/* for insæt og tilmeld til at stå op af*/
+input{
+    padding: -6%;
+}
+/*iconer til at stå i colum*/
+.medie {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    list-style: none;
+    margin: 100% 100%;
+}
+
+.kontakt {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    list-style: none;
+    margin: 100% -100%
+}
+
+/*størlse på icon billiderne*/
+.medie img,
+.kontakt img {
+    width: auto;
+    height: 60px;
+}
+
+/*mellemrum mellem iconerne*/
+.medie li,
+.kontakt li {
+    margin-bottom: 20px;
+}
+
+/*inhold i foter til at stå i en row*/
+.fod {
+    display: flex;
+    flex-direction: row;
+}
+
 /*Baggrunds billide*/
 .bg2 {
     background-image: url("../img/bg2.png");
@@ -134,5 +236,33 @@ main p {
     }
     .hero img {
         width: 40vw;
+    }
+    .burger {
+    display: flex;
+    }
+}
+
+/*til footer*/
+@media only screen and (max-width: 570px) {
+
+    .tilmeld {
+        width: 40%;
+    }
+    
+    .insæt {
+        width: 100%;
+    }
+
+    .tilmeld input[type="text"] {
+        width: 70%;
+    }
+    
+    .tilmeld input[type="submit"] {
+        padding: 6px 5px;
+    }
+    
+    input{
+        margin: -6%;
+        padding: -6%;
     }
 }
