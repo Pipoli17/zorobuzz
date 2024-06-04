@@ -14,10 +14,16 @@
     --color-text: white;
 }
 
+/*støelse på body og main*/
 .body {
     background-color: #678417;
 }
 
+.main {
+    justify-content: center;
+}
+
+/*instelinger for burger*/
 .burger {
     display: flex;
     justify-content: center;
@@ -39,15 +45,17 @@
     left: 33%;
     top: 0;
     width: 35vw;
-   
+
 }
+
+/*instalinger for dåseøl*/
 .øl {
     display: flex;
     width: 100vw;
-    height: 100vh;    
+    height: 100vh;
 }
 
- .enkeløl1 {
+.enkeløl1 {
     background-color: var(--color-main-pink);
     display: flex;
     flex-direction: column;
@@ -56,13 +64,14 @@
     width: 33.33%;
     height: 100%;
     justify-content: center;
- }
- .enkeløl1 :hover {
+}
+
+.enkeløl1 :hover {
     transform: scale(1.05);
     transition: 0.4s;
- }
+}
 
- .enkeløl2 {
+.enkeløl2 {
     background-color: #678417;
     display: flex;
     flex-direction: column;
@@ -70,14 +79,15 @@
     gap: 15px;
     width: 33.33%;
     height: 100%;
-    justify-content:end;
- }
- .enkeløl2 :hover {
+    justify-content: end;
+}
+
+.enkeløl2 :hover {
     transform: scale(1.05);
     transition: 0.4s;
- }
+}
 
- .enkeløl3 { 
+.enkeløl3 {
     background-color: #FDAD00;
     display: flex;
     flex-direction: column;
@@ -86,13 +96,14 @@
     width: 33.33%;
     height: 100%;
     justify-content: center;
- }
- .enkeløl3 :hover {
+}
+
+.enkeløl3 :hover {
     transform: scale(1.05);
     transition: 0.4s;
- }
- 
- 
+}
+
+/*footer*/
 footer {
     display: flex;
     justify-content: space-between;
@@ -112,7 +123,7 @@ footer {
 }
 
 .insæt {
-    display: flex; 
+    display: flex;
     flex-direction: row;
 }
 
@@ -142,10 +153,12 @@ footer {
 .tilmeld input[type="submit"]:hover {
     background-color: var(--color-main-orange);
 }
+
 /* for insæt og tilmeld til at stå op af*/
-input{
+input {
     padding: -6%;
 }
+
 /*iconer til at stå i colum*/
 .medie {
     display: flex;
@@ -158,7 +171,6 @@ input{
 .kontakt {
     display: flex;
     flex-direction: column;
-    align-items: left;
     list-style: none;
     margin: 100% -100%
 }
@@ -181,31 +193,36 @@ input{
     display: flex;
     flex-direction: row;
 }
+
 @media only screen and (max-width: 700px) {
     main {
         flex-direction: row;
         height: fit-content;
     }
+
     .enkeløl1 img {
         width: 100%;
         height: fit-content;
     }
+
     .enkeløl2 img {
         width: 100%;
         height: fit-content;
     }
+
     .enkeløl3 img {
         width: 100%;
         height: fit-content;
     }
 }
+
 /*til footer*/
 @media only screen and (max-width: 570px) {
 
     .tilmeld {
         width: 40%;
     }
-    
+
     .insæt {
         width: 100%;
     }
@@ -213,12 +230,12 @@ input{
     .tilmeld input[type="text"] {
         width: 70%;
     }
-    
+
     .tilmeld input[type="submit"] {
         padding: 6px 5px;
     }
-    
-    input{
+
+    input {
         margin: -6%;
         padding: -6%;
     }

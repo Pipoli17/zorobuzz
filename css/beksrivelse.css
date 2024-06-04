@@ -1,5 +1,3 @@
-/* Hjælp til css https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax */
-
 * {
     margin: 0;
     padding: 0;
@@ -22,6 +20,7 @@ body {
     height: 100vh;
     overflow-x: hidden;
     color: var(--color-text);
+
 }
 
 /*font til h*/
@@ -34,90 +33,10 @@ h6 {
     font-family: url("../fonts/made_carving/MADECARVINGOutlinePersonalUse-Bold.otf");
 }
 
-/*Hvodemenu man ser på laptop*/
-.menu {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width: calc(100% - 60px);
-    /* Hvis margin ikke virker kan man bruge dette */
-    margin: 0 30px;
-}
-
-.menu .menupunkter {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 60%;
-    list-style: none;
-}
-
-.menu div {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-    width: 30%;
-}
-
-/*Logo på laptop*/
-.menu div img {
-    width: 80%;
-}
-
-.menu li {
-    padding: 5px;
-}
-
-.menu a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/*Gør sådan submenuer dukker frem når man hover hen over*/
-.hovedmenu {
-    position: relative;
-}
-
-.hovedmenu a {
-    color: #678417;
-    font-weight: 1000;
-}
-
-.submenu a {
-    color: #678417;
-}
-
-.submenu li {
-    color: #678417;
-    font-weight: 1000;
-}
-
-.submenu {
-    display: none;
-    position: absolute;
-    flex-direction: column;
-    width: 150px;
-    list-style: none;
-    background-color: #E297E2;
-}
-
-.submenu:hover {
-    display: flex;
-}
-
-.hovedmenu:hover .submenu {
-    display: flex;
-}
-
 
 /*Insteling for burger*/
 .burger {
-    display: none;
     justify-content: center;
-    position: relative;
 }
 
 .burgericon {
@@ -130,15 +49,28 @@ h6 {
     width: 6vw;
 }
 
-.burgerlogo {
-    width: 35vw;
-    padding: 15px;
-}
-
-/*støresle for main*/
+/*strøese for main*/
 main {
     width: 100%;
     height: 100%;
+}
+
+/*instelinger for inholdet*/
+.Indholdet {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.øldåse {
+    margin-right: 20px;
+    margin-left: 100px;
+}
+
+.text {
+    margin-right: 150px;
+    margin-left: 20px;
 }
 
 /*footer*/
@@ -147,7 +79,6 @@ footer {
     justify-content: space-between;
     width: 100%;
     height: 50vh;
-    background-color: var(--color-main-green);
 }
 
 .tilmeld {
@@ -182,19 +113,19 @@ footer {
 
 .tilmeld input[type="submit"] {
     padding: 6px 20px;
-    background-color: var(--color-main-pink);
+    background-color: var(--color-main-orange);
     color: white;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-/* Baggrundsfarve ved hover */
+/* Baggrundsfarve ved hover til tilmeld */
 .tilmeld input[type="submit"]:hover {
-    background-color: var(--color-main-orange);
+    background-color: var(--color-main-green);
 }
 
-/* for insæt og tilmeld til at stå op af*/
+/* for insæt og tilmeld til at stå op af hinaden*/
 input {
     padding: -6%;
 }
@@ -229,26 +160,55 @@ input {
     margin-bottom: 20px;
 }
 
-/*inhold i foter til at stå i en row*/
+/*inhold i foter til at stå i en row og ændre farve på de andre ølsider*/
 .fod {
     display: flex;
     flex-direction: row;
+    background-color: var(--color-main-pink)
 }
 
-/* Baggrundsbillide og størelse*/
-.bg1 {
-    background-image: url("../img/forside.jpg");
+.fod2 {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-main-green)
+}
+
+.fod3 {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-main-green)
+}
+
+/* Baggrundsbillide og størelse på hver øldåse*/
+.baggrund {
+    background-color: #678417;
     background-size: cover;
     background-position: center center;
 }
 
-@media only screen and (max-width: 1000px) {
-    .burger {
-        display: flex;
+.baggrund2 {
+    background-color: var(--color-main-pink);
+    background-size: cover;
+    background-position: center center;
+}
+
+.baggrund3 {
+    background-color: var(--color-main-orange);
+    background-size: cover;
+    background-position: center center;
+}
+
+
+/*Fjener øldåse til mobil og fylder tesxt ud til mobil*/
+@media (max-width: 1024px) {
+
+    .øldåse {
+        display: none;
     }
 
-    .menu {
-        display: none;
+    .text {
+        margin-right: 20px;
+        margin-left: 20px;
     }
 }
 

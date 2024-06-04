@@ -12,19 +12,27 @@
     --color-main-pink: #E297E2;
     --color-main-orange: #FDAD00;
 
-    --color-text: white; 
+    --color-text: white;
 }
+
 /*Font udefra*/
 @font-face {
     font-family: "made_carving";
     src: url("../fonts/made_carving/MADECARVINGPersonalUse-Bold.otf");
 }
+
 /*Font til udvalgte*/
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "made_carving";
 }
+
 .burger {
-    justify-content:center;
+    justify-content: center;
 }
 
 .burgericon {
@@ -38,7 +46,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* indstillinger for body*/
-body { 
+body {
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
@@ -63,20 +71,20 @@ main {
 }
 
 /*Foto på main indstillinger*/
-.strand{
+.strand {
     width: calc(100% - 40px);
     margin-top: 5%;
 }
 
 /*Gør sådan første conten hænger sammen med baggrundsbillide*/
-.hero{
+.hero {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:20px; 
+    gap: 20px;
 }
 
 /*logo*/
@@ -85,23 +93,23 @@ main {
 }
 
 /*Titel indstillinger*/
-.hero .title{
+.hero .title {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     width: 70%;
 }
 
 /* brødteksten størelse indstillinger*/
-main section{
+main section {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:20px; 
+    gap: 20px;
     align-items: center;
     margin: 20px;
 }
@@ -110,10 +118,12 @@ main section{
 main p {
     margin: 0 20px;
     text-align: justify;
-    text-transform: none; /*til at lave om i textsskrift*/
+    text-transform: none;
+    /*til at lave om i textsskrift*/
     margin-top: 12%;
     line-height: 2;
 }
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -132,7 +142,7 @@ footer {
 }
 
 .insæt {
-    display: flex; 
+    display: flex;
     flex-direction: row;
 }
 
@@ -144,11 +154,11 @@ footer {
 .tilmeld input[type="text"] {
     padding: 5px;
     width: 200px;
- 
+
     background-color: #f0f0f0;
-  
+
     border: 1px solid #ccc;
- 
+
     color: #ccc;
 }
 
@@ -165,10 +175,12 @@ footer {
 .tilmeld input[type="submit"]:hover {
     background-color: var(--color-main-green);
 }
+
 /* for insæt og tilmeld til at stå op af*/
-input{
+input {
     padding: -6%;
 }
+
 /*iconer til at stå i colum*/
 .medie {
     display: flex;
@@ -212,25 +224,21 @@ input{
     background-repeat: no-repeat;
 }
 
-/* ?
-.input-container {
-    display: flex;
-    align-items: center;
-}
-*/
-
 /*tilpasser sig skærmstørlse*/
 @media screen and (max-width: 768px) {
-    main{
+    main {
         width: 100%;
         max-width: initial;
     }
-    main section{
+
+    main section {
         width: 100%;
     }
+
     .hero h1 {
         font-size: 13vw;
     }
+
     .hero img {
         width: 40vw;
     }
@@ -242,7 +250,7 @@ input{
     .tilmeld {
         width: 40%;
     }
-    
+
     .insæt {
         width: 100%;
     }
@@ -250,12 +258,12 @@ input{
     .tilmeld input[type="text"] {
         width: 70%;
     }
-    
+
     .tilmeld input[type="submit"] {
         padding: 6px 5px;
     }
-    
-    input{
+
+    input {
         margin: -6%;
         padding: -6%;
     }
