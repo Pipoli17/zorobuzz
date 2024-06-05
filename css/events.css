@@ -209,19 +209,14 @@ input {
 .medie {
     display: flex;
     flex-direction: column;
-    align-items: left;
     list-style: none;
-    margin: 100% 100%;
 }
 
 .kontakt {
     display: flex;
     flex-direction: column;
-    align-items: left;
     list-style: none;
-    margin: 100% -100%
 }
-
 /*størlse på icon billiderne*/
 .medie img,
 .kontakt img {
@@ -239,6 +234,9 @@ input {
 .fod {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    padding: 10px 30px;
+    width: calc(100% - 60px);
 }
 
 /*Baggrunds billide*/
